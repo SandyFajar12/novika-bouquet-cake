@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novika Bouquet - Flower Bouquets & Birthday Cakes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section 
+        id="hero" 
+        class="hero"
+        style="
+            min-height: 100vh;
+            background-image:
+              linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+              url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        "
+    >
+        <div class="hero-content" style="color:#fff; max-width:700px; padding:20px;">
+            <h1 class="hero-title">Novika Bouquet</h1>
+            <p class="hero-text">
+                Novika Bouquet menyediakan bouquet cantik dan cake ulang tahun
+                yang dibuat dengan penuh cinta untuk setiap momen spesial.
+            </p>
+            <button class="btn btn-primary" onclick="scrollToProducts()">
+                Lihat Pricelist
+            </button>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>Tentang Kami</h2>
+            <p>Kami berkomitmen menghadirkan bouquet dan cake berkualitas dengan desain menarik dan rasa yang memuaskan.</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2 class="section-title">Pricelist</h2>
+        <div class="products-grid">
+            <!-- Bouquet Mawar -->
+            <div class="product-card" onclick="openModal(this)">
+                <img src="/placeholder.svg?height=300&width=300" alt="Bouquet Mawar" class="product-image">
+                <h3 class="product-name">Bouquet Mawar</h3>
+                <p class="product-price">Rp150.000</p>
+            </div>
+
+            <!-- Bouquet Mix -->
+            <div class="product-card" onclick="openModal(this)">
+                <img src="/placeholder.svg?height=300&width=300" alt="Bouquet Mix" class="product-image">
+                <h3 class="product-name">Bouquet Mix</h3>
+                <p class="product-price">Rp200.000</p>
+            </div>
+
+            <!-- Birthday Cake Small -->
+            <div class="product-card" onclick="openModal(this)">
+                <img src="/placeholder.svg?height=300&width=300" alt="Birthday Cake Small" class="product-image">
+                <h3 class="product-name">Birthday Cake Small</h3>
+                <p class="product-price">Rp180.000</p>
+            </div>
+
+            <!-- Birthday Cake Custom -->
+            <div class="product-card" onclick="openModal(this)">
+                <img src="/placeholder.svg?height=300&width=300" alt="Birthday Cake Custom" class="product-image">
+                <h3 class="product-name">Birthday Cake Custom</h3>
+                <p class="product-price">Rp250.000</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <img id="modalImage" src="/placeholder.svg" alt="" class="modal-image">
+                <div class="modal-info">
+                    <h2 id="modalName"></h2>
+                    <p id="modalPrice" class="modal-price"></p>
+                    <p id="modalDescription" class="modal-description"></p>
+                    <button class="btn btn-primary btn-whatsapp" id="whatsappBtn" onclick="orderViaWhatsapp()">Pesan via WhatsApp</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Novika Bouquet</h3>
+            <p>WhatsApp: <a href="https://wa.me/6289533176273" target="_blank">0895-3317-6273</a></p>
+            <p>&copy; 2026 Novika Bouquet. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
